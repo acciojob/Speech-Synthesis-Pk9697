@@ -60,22 +60,22 @@
 	  speechSynthesis.onvoiceschanged = populateVoiceList;
 	}
  
-	speakButton.addEventListener('click',()=>{
-		utterThis = new SpeechSynthesisUtterance(options[2].value);
-		  const selectedOption = voicesDropdown.selectedOptions[0].getAttribute('data-name');
-		  for (const voice of voices) {
-		    if (voice.name === selectedOption) {
-		      utterThis.voice = voice;
-		    }
-		  }
-		  utterThis.pitch = options[1].value;
-		  utterThis.rate = options[0].value;
-		  synth.speak(utterThis);
-	})
+	// speakButton.addEventListener('click',()=>{
+	// 	utterThis = new SpeechSynthesisUtterance(options[2].value);
+	// 	  const selectedOption = voicesDropdown.selectedOptions[0].getAttribute('data-name');
+	// 	  for (const voice of voices) {
+	// 	    if (voice.name === selectedOption) {
+	// 	      utterThis.voice = voice;
+	// 	    }
+	// 	  }
+	// 	  utterThis.pitch = options[1].value;
+	// 	  utterThis.rate = options[0].value;
+	// 	  synth.speak(utterThis);
+	// })
 
-	stopButton.addEventListener('click',()=>{
-		  synth.cancel()
-	})
+	// stopButton.addEventListener('click',()=>{
+	// 	  synth.cancel()
+	// })
 
 	
 	  
